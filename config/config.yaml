@@ -1,0 +1,44 @@
+# AI Model Configuration
+models:
+  primary: "codellama:7b"
+  alternatives:
+    - "deepseek-coder:6.7b"
+    - "codegemma:7b"
+    - "llama3:8b"
+
+# Ollama Configuration
+ollama:
+  base_url: "http://localhost:11434"
+  timeout: 30
+  max_tokens: 2000
+  temperature: 0.7
+
+# Code Processing
+code_processing:
+  context_lines: 20
+  max_file_size: 1048576  # 1MB
+  supported_languages:
+    - python
+    - javascript
+    - typescript
+    - java
+    - cpp
+    - go
+    - rust
+    - ruby
+    - php
+
+# Features
+features:
+  code_completion: true
+  code_review: true
+  debugging: true
+  explanation: true
+  refactoring: true
+  documentation: true
+  
+# Web Interface (optional)
+web:
+  host: "localhost"
+  port: 8000
+  debug: false
